@@ -1,0 +1,12 @@
+#!/usr/bin/env nix-shell
+#!nix-shell -i bash
+
+set -eu -o pipefail
+cd "$(dirname "${BASH_SOURCE[0]}")"
+
+source nix/update-lib.sh
+update-niv
+echo 1>&2 update: Propagating updates to source files...
+cp nix/sources.json nix/sources.nix hercules_ci_agent_nixos/
+update-tf-refs '["terraform-nixos"]' '$(find . -name \*.tf)'
+update-summarize
