@@ -17,7 +17,7 @@ data "external" "nixpkgs_src" {
     "--json",
     "--read-write-mode",
     "--strict",
-    "{ src }: let sources = import (src + \"/nix/sources.nix\"); in { nixpkgs = builtins.readFile (builtins.toFile \"nixpkgs\" sources.\"nixos-19.03\".outPath); }",
+    "{ src }: let sources = import (src + \"/nix/sources.nix\"); in { nixpkgs = builtins.readFile (builtins.toFile \"nixpkgs\" sources.\"nixpkgs\".outPath); }",
     "--arg",
     "src",
     "~/h/hercules-ci-agent",

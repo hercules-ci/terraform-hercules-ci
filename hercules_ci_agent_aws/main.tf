@@ -14,9 +14,9 @@ module "nixos" {
   }
 }
 
-module "nixos_image_1903" {
+module "nixos_image_1909" {
   source = "git::https://github.com/tweag/terraform-nixos.git//aws_image_nixos?ref=d61e2a193620df13af5930be16f5b1f572f95ffa"
-  release = "19.03"
+  release = "19.09"
 }
 
 resource "aws_security_group" "ssh_and_egress" {
@@ -42,7 +42,7 @@ resource "aws_key_pair" "deployer" {
 }
 
 resource "aws_instance" "machine" {
-  ami           = "${module.nixos_image_1903.ami}"
+  ami           = "${module.nixos_image_1909.ami}"
   instance_type = "${var.instance_type}"
   security_groups = [ "${aws_security_group.ssh_and_egress.name}" ]
   key_name = "${aws_key_pair.deployer.key_name}"
