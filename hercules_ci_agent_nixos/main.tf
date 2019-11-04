@@ -20,7 +20,7 @@ data "external" "nixpkgs_src" {
     "{ src }: let sources = import (src + \"/nix/sources.nix\"); in { nixpkgs = builtins.readFile (builtins.toFile \"nixpkgs\" sources.\"nixpkgs\".outPath); }",
     "--arg",
     "src",
-    "~/h/hercules-ci-agent",
+    "(import (${path.module} + "/sources.nix")).hercules-ci-agent",
   ]
 }
 
