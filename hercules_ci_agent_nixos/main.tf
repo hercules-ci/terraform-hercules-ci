@@ -17,10 +17,10 @@ data "external" "nixpkgs_src" {
     "--json",
     "--read-write-mode",
     "--strict",
-    "{ src }: let sources = import (src + \"/nix/sources.nix\"); in { nixpkgs = builtins.readFile (builtins.toFile \"nixpkgs\" sources.\"nixpkgs\".outPath); }",
+    "{ src }: let sources = import (src + \"/nix/sources.nix\"); in { nixpkgs = builtins.readFile (builtins.toFile \"nixpkgs\" sources.\"nixos-19.09\".outPath); }",
     "--arg",
     "src",
-    "(import (${path.module} + "/sources.nix")).hercules-ci-agent",
+    "(import (${path.module} + ''/sources.nix'')).hercules-ci-agent",
   ]
 }
 
