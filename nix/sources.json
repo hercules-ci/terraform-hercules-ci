@@ -36,15 +36,15 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "terraform-nixos": {
-        "branch": "master",
+        "branch": "amis-19.09",
         "description": "A set of Terraform modules that are designed to deploy NixOS",
         "homepage": null,
-        "owner": "tweag",
+        "owner": "hercules-ci",
         "repo": "terraform-nixos",
-        "rev": "d61e2a193620df13af5930be16f5b1f572f95ffa",
-        "sha256": "0ybgvkzsl6n82wka1zdzfmkyi7ihihxk7vl99r8pwll4w0xw2ypm",
+        "rev": "30792ace8a09fb55a523db5db6f15cfeaa168fec",
+        "sha256": "16p2ka3zavmaq16fx241fg5x3w276yg0wavzqby7rj0k70ddk35x",
         "type": "tarball",
-        "url": "https://github.com/tweag/terraform-nixos/archive/d61e2a193620df13af5930be16f5b1f572f95ffa.tar.gz",
+        "url": "https://github.com/hercules-ci/terraform-nixos/archive/30792ace8a09fb55a523db5db6f15cfeaa168fec.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }

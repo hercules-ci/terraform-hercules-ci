@@ -15,7 +15,7 @@ module "nixos" {
 }
 
 module "nixos_image_1909" {
-  source = "git::https://github.com/tweag/terraform-nixos.git//aws_image_nixos?ref=d61e2a193620df13af5930be16f5b1f572f95ffa"
+  source = "git::https://github.com/hercules-ci/terraform-nixos.git//aws_image_nixos?ref=30792ace8a09fb55a523db5db6f15cfeaa168fec"
   release = "19.09"
 }
 
