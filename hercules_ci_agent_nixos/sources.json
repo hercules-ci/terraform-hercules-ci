@@ -1,14 +1,14 @@
 {
     "hercules-ci-agent": {
-        "branch": "hercules-ci-agent-0.6.0",
+        "branch": "hercules-ci-agent-0.6.1",
         "description": "https://hercules-ci.com build agent",
         "homepage": "",
         "owner": "hercules-ci",
         "repo": "hercules-ci-agent",
-        "rev": "02e00591c09290ebce149074498b511e6f75948e",
-        "sha256": "12am6761yhz2h04qmq9n6941688ghpqwrsf6nhnx8s9y9sqv1x70",
+        "rev": "847cfc35a9dad98c1e2d119cb4f15e39eb9e11ff",
+        "sha256": "0ry0hy5kppwqj470zycfb7cfvfhzlmf5pg8g4j82yn5qv2h9pfw7",
         "type": "tarball",
-        "url": "https://github.com/hercules-ci/hercules-ci-agent/archive/02e00591c09290ebce149074498b511e6f75948e.tar.gz",
+        "url": "https://github.com/hercules-ci/hercules-ci-agent/archive/847cfc35a9dad98c1e2d119cb4f15e39eb9e11ff.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "niv": {
@@ -36,15 +36,15 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "terraform-nixos": {
-        "branch": "amis-19.09",
+        "branch": "master",
         "description": "A set of Terraform modules that are designed to deploy NixOS",
         "homepage": null,
-        "owner": "hercules-ci",
+        "owner": "tweag",
         "repo": "terraform-nixos",
-        "rev": "30792ace8a09fb55a523db5db6f15cfeaa168fec",
+        "rev": "e60b6358be30ea4746d18df5037df8dd17dfe54f",
         "sha256": "16p2ka3zavmaq16fx241fg5x3w276yg0wavzqby7rj0k70ddk35x",
         "type": "tarball",
-        "url": "https://github.com/hercules-ci/terraform-nixos/archive/30792ace8a09fb55a523db5db6f15cfeaa168fec.tar.gz",
+        "url": "https://github.com/tweag/terraform-nixos/archive/e60b6358be30ea4746d18df5037df8dd17dfe54f.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }

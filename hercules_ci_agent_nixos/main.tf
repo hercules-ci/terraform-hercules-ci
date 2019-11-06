@@ -25,7 +25,7 @@ data "external" "nixpkgs_src" {
 }
 
 module "deploy_nixos" {
-  source = "git::https://github.com/hercules-ci/terraform-nixos.git//deploy_nixos?ref=30792ace8a09fb55a523db5db6f15cfeaa168fec"
+  source = "git::https://github.com/tweag/terraform-nixos.git//deploy_nixos?ref=e60b6358be30ea4746d18df5037df8dd17dfe54f"
 
   config = "{ pkgs, lib, ... }: { imports = [ (/. + ''${join("'') (/. + ''",compact(flatten(local.configs)))}'') ]; }"
 
