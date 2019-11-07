@@ -17,15 +17,15 @@ data "external" "nixpkgs_src" {
     "--json",
     "--read-write-mode",
     "--strict",
-    "{ src }: let sources = import (src + \"/nix/sources.nix\"); in { nixpkgs = builtins.readFile (builtins.toFile \"nixpkgs\" sources.\"nixos-19.03\".outPath); }",
+    "{ src }: let sources = import (src + \"/nix/sources.nix\"); in { nixpkgs = builtins.readFile (builtins.toFile \"nixpkgs\" sources.\"nixos-19.09\".outPath); }",
     "--arg",
     "src",
-    "~/h/hercules-ci-agent",
+    "(import (${path.module} + ''/sources.nix'')).hercules-ci-agent",
   ]
 }
 
 module "deploy_nixos" {
-  source = "git::https://github.com/tweag/terraform-nixos.git//deploy_nixos?ref=d61e2a193620df13af5930be16f5b1f572f95ffa"
+  source = "git::https://github.com/tweag/terraform-nixos.git//deploy_nixos?ref=e60b6358be30ea4746d18df5037df8dd17dfe54f"
 
   config = "{ pkgs, lib, ... }: { imports = [ (/. + ''${join("'') (/. + ''",compact(flatten(local.configs)))}'') ]; }"
 
