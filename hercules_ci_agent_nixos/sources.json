@@ -1,14 +1,14 @@
 {
     "hercules-ci-agent": {
-        "branch": "hercules-ci-agent-0.6.1",
+        "branch": "hercules-ci-agent-0.6.2",
         "description": "https://hercules-ci.com build agent",
         "homepage": "",
         "owner": "hercules-ci",
         "repo": "hercules-ci-agent",
-        "rev": "847cfc35a9dad98c1e2d119cb4f15e39eb9e11ff",
-        "sha256": "0ry0hy5kppwqj470zycfb7cfvfhzlmf5pg8g4j82yn5qv2h9pfw7",
+        "rev": "c5ea4b24039d6d75d1910d2007a97ba38dd50128",
+        "sha256": "07i5xcl9n4r9w58lq99l70iqzcmhybbdw97wyk83jfs40mz3v141",
         "type": "tarball",
-        "url": "https://github.com/hercules-ci/hercules-ci-agent/archive/847cfc35a9dad98c1e2d119cb4f15e39eb9e11ff.tar.gz",
+        "url": "https://github.com/hercules-ci/hercules-ci-agent/archive/c5ea4b24039d6d75d1910d2007a97ba38dd50128.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "niv": {
