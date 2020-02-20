@@ -1,10 +1,10 @@
 
 locals {
-  configs = [
-    "${path.module}/configuration.nix",
-    "${var.use_prebuilt ? "${path.module}/hercules-ci-cache.nix" : "" }",
-    "${var.configs}"
-  ]
+  configs = concat(
+    [abspath("${path.module}/configuration.nix")],
+    var.use_prebuilt ? [abspath("${path.module}/hercules-ci-cache.nix")] : [],
+    var.configs
+    )
 }
 
 data "external" "nixpkgs_src" {

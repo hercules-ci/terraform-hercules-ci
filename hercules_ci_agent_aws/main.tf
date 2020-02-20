@@ -3,10 +3,7 @@ module "nixos" {
   source = "../hercules_ci_agent_nixos"
   target_host = "${aws_instance.machine.public_ip}"
   use_prebuilt = "${var.use_prebuilt}"
-  configs = [
-    "${path.module}/configuration-aws.nix",
-    "${var.configs}",
-  ]
+  configs = concat([abspath("${path.module}/configuration-aws.nix")], var.configs)
   cluster_join_token = "${var.cluster_join_token}"
   binary_caches_json = "${var.binary_caches_json}"
   triggers = {
