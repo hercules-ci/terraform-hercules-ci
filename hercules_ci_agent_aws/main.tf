@@ -3,10 +3,7 @@ module "nixos" {
   source = "../hercules_ci_agent_nixos"
   target_host = "${aws_instance.machine.public_ip}"
   use_prebuilt = "${var.use_prebuilt}"
-  configs = [
-    "${path.module}/configuration-aws.nix",
-    "${var.configs}",
-  ]
+  configs = concat([abspath("${path.module}/configuration-aws.nix")], var.configs)
   cluster_join_token = "${var.cluster_join_token}"
   binary_caches_json = "${var.binary_caches_json}"
   triggers = {
@@ -15,7 +12,7 @@ module "nixos" {
 }
 
 module "nixos_image_1909" {
-  source = "git::https://github.com/tweag/terraform-nixos.git//aws_image_nixos?ref=e60b6358be30ea4746d18df5037df8dd17dfe54f"
+  source = "git::https://github.com/tweag/terraform-nixos.git//aws_image_nixos?ref=f7ed7836ca324a1376828ff32f432bf6c754e572"
   release = "19.09"
 }
 

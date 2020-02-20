@@ -1,10 +1,10 @@
 
 locals {
-  configs = [
-    "${path.module}/configuration.nix",
-    "${var.use_prebuilt ? "${path.module}/hercules-ci-cache.nix" : "" }",
-    "${var.configs}"
-  ]
+  configs = concat(
+    [abspath("${path.module}/configuration.nix")],
+    var.use_prebuilt ? [abspath("${path.module}/hercules-ci-cache.nix")] : [],
+    var.configs
+    )
 }
 
 data "external" "nixpkgs_src" {
@@ -25,7 +25,7 @@ data "external" "nixpkgs_src" {
 }
 
 module "deploy_nixos" {
-  source = "git::https://github.com/tweag/terraform-nixos.git//deploy_nixos?ref=e60b6358be30ea4746d18df5037df8dd17dfe54f"
+  source = "git::https://github.com/tweag/terraform-nixos.git//deploy_nixos?ref=f7ed7836ca324a1376828ff32f432bf6c754e572"
 
   config = "{ pkgs, lib, ... }: { imports = [ (/. + ''${join("'') (/. + ''",compact(flatten(local.configs)))}'') ]; }"
 
