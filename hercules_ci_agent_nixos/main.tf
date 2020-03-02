@@ -5,23 +5,7 @@ locals {
     var.use_prebuilt ? [abspath("${path.module}/hercules-ci-cache.nix")] : [],
     var.configs
     )
-}
-
-data "external" "nixpkgs_src" {
-  program = [
-    "/usr/bin/env",
-    "NIX_PATH=",
-    "nix-instantiate",
-    "--eval",
-    "--expr",
-    "--json",
-    "--read-write-mode",
-    "--strict",
-    "{ src }: let sources = import (src + \"/nix/sources.nix\"); in { nixpkgs = builtins.readFile (builtins.toFile \"nixpkgs\" sources.\"nixos-19.09\".outPath); }",
-    "--arg",
-    "src",
-    "(import (${path.module} + ''/sources.nix'')).hercules-ci-agent",
-  ]
+  nixpkgs_src = jsondecode(file("${path.module}/sources.json"))["nixpkgs"]["url"]
 }
 
 module "deploy_nixos" {
@@ -31,7 +15,7 @@ module "deploy_nixos" {
 
   target_user = "root"
   target_host = "${var.target_host}"
-  NIX_PATH = "nixpkgs=${data.external.nixpkgs_src.result["nixpkgs"]}"
+  NIX_PATH = "nixpkgs=${local.nixpkgs_src}"
 
   triggers = "${var.triggers}"
 
