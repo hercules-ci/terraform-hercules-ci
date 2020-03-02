@@ -29,3 +29,8 @@ variable "binary_caches_json" {
   type = "string"
   description = "The binary-caches.json contents. See https://docs.hercules-ci.com/hercules-ci/reference/agent-config/#binaryCachesPath"
 }
+
+variable "ssh_private_key_file" {
+  description = "Path to private key used to connect to the target_host. Ignored if `-` or empty."
+  default     = "-"
+}
