@@ -36,3 +36,8 @@ variable "disk_size" {
   description = "Size of the filesystem in GiB"
   default = 100
 }
+
+variable "ssh_private_key_file" {
+  description = "Path to private key used to connect to the target_host. Ignored if `-` or empty."
+  default     = "-"
+}

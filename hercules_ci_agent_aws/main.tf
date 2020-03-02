@@ -6,6 +6,7 @@ module "nixos" {
   configs = concat([abspath("${path.module}/configuration-aws.nix")], var.configs)
   cluster_join_token = "${var.cluster_join_token}"
   binary_caches_json = "${var.binary_caches_json}"
+  ssh_private_key_file = var.ssh_private_key_file
   triggers = {
     machine_id = "${aws_instance.machine.id}"
   }
