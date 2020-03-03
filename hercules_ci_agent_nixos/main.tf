@@ -9,12 +9,13 @@ locals {
 }
 
 module "deploy_nixos" {
-  source = "git::https://github.com/hercules-ci/terraform-nixos.git//deploy_nixos?ref=b22538c2eff5d5511afe8b64090e5f36920d4242"
+  source = "git::https://github.com/hercules-ci/terraform-nixos.git//deploy_nixos?ref=6799323eb530ea94710b151c4c73ab6b50e5b7db"
 
   config = "{ pkgs, lib, ... }: { imports = [ (/. + ''${join("'') (/. + ''",compact(flatten(local.configs)))}'') ]; }"
 
   target_user = "root"
   target_host = "${var.target_host}"
+  build_on_target = true
   NIX_PATH = "nixpkgs=${local.nixpkgs_src}"
 
   triggers = "${var.triggers}"
