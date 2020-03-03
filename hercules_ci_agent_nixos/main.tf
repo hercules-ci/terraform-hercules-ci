@@ -20,6 +20,7 @@ module "deploy_nixos" {
   triggers = "${var.triggers}"
 
   ssh_private_key_file = var.ssh_private_key_file
+  ssh_agent = var.ssh_agent
 
   keys = {
     cluster_join_token = "${var.cluster_join_token}"
