@@ -7,6 +7,7 @@ module "nixos" {
   cluster_join_token = "${var.cluster_join_token}"
   binary_caches_json = "${var.binary_caches_json}"
   ssh_private_key_file = var.ssh_private_key_file
+  ssh_agent = var.ssh_agent
   triggers = {
     machine_id = "${aws_instance.machine.id}"
   }

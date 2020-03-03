@@ -41,3 +41,9 @@ variable "ssh_private_key_file" {
   description = "Path to private key used to connect to the target_host. Ignored if `-` or empty."
   default     = "-"
 }
+
+variable "ssh_agent" {
+  description = "Whether to use an SSH agent"
+  type        = bool
+  default     = true
+}
