@@ -8,7 +8,6 @@
         "rev": "04a8ae8c99506cfdbeaef141d7387f38c196a4ac",
         "sha256": "051095amk3zr9cbbgb9d9d91ni44nygb2nckgnc0adn5j5mnzzf7",
         "type": "tarball",
-        "builtin": false,
         "url": "https://github.com/hercules-ci/hercules-ci-agent/archive/04a8ae8c99506cfdbeaef141d7387f38c196a4ac.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
@@ -21,7 +20,6 @@
         "rev": "98c74a80934123cb4c3bf3314567f67311eb711a",
         "sha256": "1w8n54hapd4x9f1am33icvngkqns7m3hl9yair38yqq08ffwg0kn",
         "type": "tarball",
-        "builtin": false,
         "url": "https://github.com/nmattia/niv/archive/98c74a80934123cb4c3bf3314567f67311eb711a.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
@@ -34,7 +32,6 @@
         "rev": "ce9f1aaa39ee2a5b76a9c9580c859a74de65ead5",
         "sha256": "1s2b9rvpyamiagvpl5cggdb2nmx4f7lpylipd397wz8f0wngygpi",
         "type": "tarball",
-        "builtin": false,
         "url": "https://github.com/NixOS/nixpkgs-channels/archive/ce9f1aaa39ee2a5b76a9c9580c859a74de65ead5.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
@@ -47,7 +44,6 @@
         "rev": "552662291bf008d8c6f28e5d965787854844f00d",
         "sha256": "1cddv4a7xwzqnmmdzn006y40c309i23gj26flssfkzixfv8v07c7",
         "type": "tarball",
-        "builtin": false,
         "url": "https://github.com/hercules-ci/terraform-nixos/archive/552662291bf008d8c6f28e5d965787854844f00d.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
