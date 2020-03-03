@@ -52,3 +52,9 @@ variable "ami" {
   description = "Amazon machine image. Default: official NixOS image determined via mapping."
   default     = null
 }
+
+variable "system" {
+  type = string
+  description = "Nix system string"
+  default = "x86_64-linux"
+}

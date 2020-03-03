@@ -8,6 +8,7 @@ module "nixos" {
   binary_caches_json = "${var.binary_caches_json}"
   ssh_private_key_file = var.ssh_private_key_file
   ssh_agent = var.ssh_agent
+  system = var.system
   triggers = {
     machine_id = "${aws_instance.machine.id}"
   }
