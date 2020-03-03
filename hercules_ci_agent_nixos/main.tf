@@ -9,7 +9,7 @@ locals {
 }
 
 module "deploy_nixos" {
-  source = "git::https://github.com/hercules-ci/terraform-nixos.git//deploy_nixos?ref=311ef769498eb102aef78c742a35155be56e0638"
+  source = "git::https://github.com/hercules-ci/terraform-nixos.git//deploy_nixos?ref=c1cbe0e0c6596bcddeb2bf4241f23a1de6b262fd"
 
   config = "{ pkgs, lib, ... }: { imports = [ (/. + ''${join("'') (/. + ''",compact(flatten(local.configs)))}'') ]; }"
 
