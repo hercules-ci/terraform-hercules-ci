@@ -41,7 +41,7 @@ resource "aws_key_pair" "deployer" {
 }
 
 resource "aws_instance" "machine" {
-  ami           = "${module.nixos_image_1909.ami}"
+  ami           = "${var.ami == null ? module.nixos_image_1909.ami : var.ami}"
   instance_type = "${var.instance_type}"
   security_groups = [ "${aws_security_group.ssh_and_egress.name}" ]
   key_name = "${aws_key_pair.deployer.key_name}"

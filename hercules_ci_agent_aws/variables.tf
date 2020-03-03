@@ -47,3 +47,8 @@ variable "ssh_agent" {
   type        = bool
   default     = true
 }
+
+variable "ami" {
+  description = "Amazon machine image. Default: official NixOS image determined via mapping."
+  default     = null
+}
