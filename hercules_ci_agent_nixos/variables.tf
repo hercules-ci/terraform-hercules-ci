@@ -41,7 +41,7 @@ variable "ssh_agent" {
   default     = true
 }
 
-variable "system" {
+variable "target_system" {
   type = string
   description = "Nix system string"
   default = "x86_64-linux"

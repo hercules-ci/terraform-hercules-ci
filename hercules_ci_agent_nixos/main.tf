@@ -9,7 +9,7 @@ locals {
 }
 
 module "deploy_nixos" {
-  source = "git::https://github.com/hercules-ci/terraform-nixos.git//deploy_nixos?ref=222c4529f5bcf8897527d7029709e59e55f67d0a"
+  source = "git::https://github.com/hercules-ci/terraform-nixos.git//deploy_nixos?ref=028300fe2654a41dc24380abce0881e4f90b97b5"
 
   config = "{ pkgs, lib, ... }: { imports = [ (/. + ''${join("'') (/. + ''",compact(flatten(local.configs)))}'') ]; }"
 
@@ -23,7 +23,7 @@ module "deploy_nixos" {
   ssh_private_key_file = var.ssh_private_key_file
   ssh_agent = var.ssh_agent
 
-  system = var.system
+  target_system = var.target_system
 
   keys = {
     cluster_join_token = "${var.cluster_join_token}"
