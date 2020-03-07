@@ -6,13 +6,15 @@ module "nixos" {
   configs = concat([abspath("${path.module}/configuration-aws.nix")], var.configs)
   cluster_join_token = "${var.cluster_join_token}"
   binary_caches_json = "${var.binary_caches_json}"
+  ssh_private_key_file = var.ssh_private_key_file
+  ssh_agent = var.ssh_agent
   triggers = {
     machine_id = "${aws_instance.machine.id}"
   }
 }
 
 module "nixos_image_1909" {
-  source = "git::https://github.com/tweag/terraform-nixos.git//aws_image_nixos?ref=f7ed7836ca324a1376828ff32f432bf6c754e572"
+  source = "git::https://github.com/tweag/terraform-nixos.git//aws_image_nixos?ref=2ec46ce7cf474f951a74711a252efa5178cefe4d"
   release = "19.09"
 }
 

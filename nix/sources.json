@@ -17,10 +17,10 @@
         "homepage": "https://github.com/nmattia/niv",
         "owner": "nmattia",
         "repo": "niv",
-        "rev": "2ecfd86b631714b457e56d70dd83fa60435baeb6",
-        "sha256": "01j6727cws8blg1npp54b4w6xa0gpgyzhyws2vqgp8clnlnmqqhi",
+        "rev": "98c74a80934123cb4c3bf3314567f67311eb711a",
+        "sha256": "1w8n54hapd4x9f1am33icvngkqns7m3hl9yair38yqq08ffwg0kn",
         "type": "tarball",
-        "url": "https://github.com/nmattia/niv/archive/2ecfd86b631714b457e56d70dd83fa60435baeb6.tar.gz",
+        "url": "https://github.com/nmattia/niv/archive/98c74a80934123cb4c3bf3314567f67311eb711a.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {
@@ -29,10 +29,10 @@
         "homepage": "https://github.com/NixOS/nixpkgs",
         "owner": "NixOS",
         "repo": "nixpkgs-channels",
-        "rev": "8731aaaf8b30888bc24994096db830993090d7c4",
-        "sha256": "1hcc89rxi47nb0mpk05nl9rbbb04kfw97xfydhpmmgh57yrp3zqa",
+        "rev": "71c6a1c4a83b8b799e50a34bed3671676e44c0ae",
+        "sha256": "0fw977wr1kkjv8wpbxqwwp78d39n2ymbpnv8mpgcc98isqv02jyi",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs-channels/archive/8731aaaf8b30888bc24994096db830993090d7c4.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs-channels/archive/71c6a1c4a83b8b799e50a34bed3671676e44c0ae.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "terraform-nixos": {
@@ -41,10 +41,10 @@
         "homepage": null,
         "owner": "tweag",
         "repo": "terraform-nixos",
-        "rev": "f7ed7836ca324a1376828ff32f432bf6c754e572",
-        "sha256": "04yd02r74ldl4n8lvhl76lard3afh0ar9xsaxj4jfczm3dlj3c6s",
+        "rev": "2ec46ce7cf474f951a74711a252efa5178cefe4d",
+        "sha256": "0303zrqs6a48f4yrlhbbgwcjr2svascq5x64wrb396549mmj58sx",
         "type": "tarball",
-        "url": "https://github.com/tweag/terraform-nixos/archive/f7ed7836ca324a1376828ff32f432bf6c754e572.tar.gz",
+        "url": "https://github.com/tweag/terraform-nixos/archive/2ec46ce7cf474f951a74711a252efa5178cefe4d.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
