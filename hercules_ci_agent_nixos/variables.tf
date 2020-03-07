@@ -31,6 +31,7 @@ variable "binary_caches_json" {
 }
 
 variable "ssh_private_key_file" {
+  type = string
   description = "Path to private key used to connect to the target_host. Ignored if `-` or empty."
   default     = "-"
 }
