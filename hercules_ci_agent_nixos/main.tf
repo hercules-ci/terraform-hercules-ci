@@ -14,16 +14,16 @@ module "deploy_nixos" {
   config = "{ pkgs, lib, ... }: { imports = [ (/. + ''${join("'') (/. + ''",compact(flatten(local.configs)))}'') ]; }"
 
   target_user = "root"
-  target_host = "${var.target_host}"
+  target_host = var.target_host
   NIX_PATH = "nixpkgs=${local.nixpkgs_src}"
 
-  triggers = "${var.triggers}"
+  triggers = var.triggers
 
   ssh_private_key_file = var.ssh_private_key_file
   ssh_agent = var.ssh_agent
 
   keys = {
-    cluster_join_token = "${var.cluster_join_token}"
-    binary_caches_json = "${var.binary_caches_json}"
+    cluster_join_token = var.cluster_join_token
+    binary_caches_json = var.binary_caches_json
   }
 }

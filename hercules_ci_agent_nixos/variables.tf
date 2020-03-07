@@ -26,7 +26,7 @@ variable "cluster_join_token" {
 }
 
 variable "binary_caches_json" {
-  type = "string"
+  type = string
   description = "The binary-caches.json contents. See https://docs.hercules-ci.com/hercules-ci/reference/agent-config/#binaryCachesPath"
 }
 
