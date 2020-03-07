@@ -15,6 +15,8 @@ module "deploy_nixos" {
 
   target_user = "root"
   target_host = var.target_host
+  target_system = var.target_system
+  build_on_target = var.build_on_target
   NIX_PATH = "nixpkgs=${local.nixpkgs_src}"
 
   triggers = var.triggers

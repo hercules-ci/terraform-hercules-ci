@@ -10,6 +10,18 @@ variable "target_host" {
   description = "NixOS host that will have an agent configuration applied to it. Must be reachable through SSH."
 }
 
+variable "target_system" {
+  type = string
+  description = "Nix system string"
+  default = "x86_64-linux"
+}
+
+variable "build_on_target" {
+  type        = string
+  description = "Avoid building on the deployer. Must be true or false. Has no effect when deploying from an incompatible system. Unlike remote builders, this does not require the deploying user to be trusted by its host."
+  default     = false
+}
+
 variable "configs" {
   type = "list"
   description = "Extra NixOS configuration modules to import"
