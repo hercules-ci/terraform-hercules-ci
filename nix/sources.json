@@ -29,10 +29,10 @@
         "homepage": "https://github.com/NixOS/nixpkgs",
         "owner": "NixOS",
         "repo": "nixpkgs-channels",
-        "rev": "71c6a1c4a83b8b799e50a34bed3671676e44c0ae",
-        "sha256": "0fw977wr1kkjv8wpbxqwwp78d39n2ymbpnv8mpgcc98isqv02jyi",
+        "rev": "3b9b10e49bec1c96e9cc105615cf4d0c28038909",
+        "sha256": "04r4i9859r2kxamdw7dxmi2fgc9vq9akfva9lqsayxk98v0yv29y",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs-channels/archive/71c6a1c4a83b8b799e50a34bed3671676e44c0ae.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs-channels/archive/3b9b10e49bec1c96e9cc105615cf4d0c28038909.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "terraform-nixos": {
@@ -41,10 +41,10 @@
         "homepage": null,
         "owner": "tweag",
         "repo": "terraform-nixos",
-        "rev": "2ec46ce7cf474f951a74711a252efa5178cefe4d",
-        "sha256": "0303zrqs6a48f4yrlhbbgwcjr2svascq5x64wrb396549mmj58sx",
+        "rev": "aa387e9132da5723c757024a9b95e86a9fbee688",
+        "sha256": "1gwkrk5n7pj3c9pvwslv36gfxznr29m71aacy0baxpp2q3n3bv16",
         "type": "tarball",
-        "url": "https://github.com/tweag/terraform-nixos/archive/2ec46ce7cf474f951a74711a252efa5178cefe4d.tar.gz",
+        "url": "https://github.com/tweag/terraform-nixos/archive/aa387e9132da5723c757024a9b95e86a9fbee688.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
