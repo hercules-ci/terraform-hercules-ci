@@ -53,3 +53,15 @@ variable "ssh_agent" {
   type        = bool
   default     = true
 }
+
+variable "extra_eval_args" {
+  description = "List of arguments to pass to the nix evaluation"
+  type        = list(string)
+  default     = []
+}
+
+variable "extra_build_args" {
+  description = "List of arguments to pass to the nix builder"
+  type        = list(string)
+  default     = []
+}

@@ -18,6 +18,8 @@ module "deploy_nixos" {
   target_system = var.target_system
   build_on_target = var.build_on_target
   NIX_PATH = "nixpkgs=${local.nixpkgs_src}"
+  extra_eval_args = var.extra_eval_args
+  extra_build_args = var.extra_build_args
 
   triggers = var.triggers
 
