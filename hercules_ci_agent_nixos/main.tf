@@ -5,7 +5,6 @@ locals {
     var.use_prebuilt ? [abspath("${path.module}/hercules-ci-cache.nix")] : [],
     var.configs
     )
-  nixpkgs_src = jsondecode(file("${path.module}/sources.json"))["nixpkgs"]["url"]
 }
 
 module "deploy_nixos" {
@@ -17,7 +16,7 @@ module "deploy_nixos" {
   target_host = var.target_host
   target_system = var.target_system
   build_on_target = var.build_on_target
-  NIX_PATH = "nixpkgs=${local.nixpkgs_src}"
+  NIX_PATH = var.NIX_PATH
   extra_eval_args = var.extra_eval_args
   extra_build_args = var.extra_build_args
 
