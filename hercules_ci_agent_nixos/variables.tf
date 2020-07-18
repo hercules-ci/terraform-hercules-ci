@@ -65,3 +65,8 @@ variable "extra_build_args" {
   type        = list(string)
   default     = []
 }
+
+variable "NIX_PATH" {
+  description = "NIX_PATH to use for evaluation. Example: \"nixpkgs=$${jsondecode(file(\"$${path.module}/../../nix/sources.json\"))[\"nixpkgs\"][\"url\"]}\""
+  type        = string
+}
