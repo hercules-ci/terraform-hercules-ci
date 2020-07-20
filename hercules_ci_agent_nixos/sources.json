@@ -1,38 +1,26 @@
 {
     "hercules-ci-agent": {
-        "branch": "hercules-ci-agent-0.6.6",
+        "branch": "hercules-ci-agent-0.7.3",
         "description": "https://hercules-ci.com build agent",
         "homepage": "",
         "owner": "hercules-ci",
         "repo": "hercules-ci-agent",
-        "rev": "c364baee22b2f0c04b39fa8097c6ccd6366a74e8",
-        "sha256": "150zvfy2lfmh3kh79bkswm37mg1xrvaddszssbh0jj22b38nv44s",
+        "rev": "a7385905cda668cdecadafe95d202512a0119159",
+        "sha256": "135hix51bs6q01aprnb9khxcdfnw4iqdds60lp805yxx9y241pq0",
         "type": "tarball",
-        "url": "https://github.com/hercules-ci/hercules-ci-agent/archive/c364baee22b2f0c04b39fa8097c6ccd6366a74e8.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "niv": {
-        "branch": "master",
-        "description": "Easy dependency management for Nix projects",
-        "homepage": "https://github.com/nmattia/niv",
-        "owner": "nmattia",
-        "repo": "niv",
-        "rev": "febd3530f0c2f2fb74752ee4d9dd2518d302f618",
-        "sha256": "1gifi50k4h6wk9ix0yvp66p7jk8rrqgr39r5rf4lyha6pbs7dbk6",
-        "type": "tarball",
-        "url": "https://github.com/nmattia/niv/archive/febd3530f0c2f2fb74752ee4d9dd2518d302f618.tar.gz",
+        "url": "https://github.com/hercules-ci/hercules-ci-agent/archive/a7385905cda668cdecadafe95d202512a0119159.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {
-        "branch": "nixos-19.09",
+        "branch": "nixos-20.03",
         "description": "A read-only mirror of NixOS/nixpkgs tracking the released channels. Send issues and PRs to",
         "homepage": "https://github.com/NixOS/nixpkgs",
         "owner": "NixOS",
         "repo": "nixpkgs-channels",
-        "rev": "289466dd6a11c65a7de4a954d6ebf66c1ad07652",
-        "sha256": "0r5ja052s86fr54fm1zlhld3fwawz2w1d1gd6vbvpjrpjfyajibn",
+        "rev": "bb8f0cc2279934cc2274afb6d0941de30b6187ae",
+        "sha256": "15b4ny9yxk04ml17sflids8sd707yibika1ikz3xi3lf5db0i8gr",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs-channels/archive/289466dd6a11c65a7de4a954d6ebf66c1ad07652.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs-channels/archive/bb8f0cc2279934cc2274afb6d0941de30b6187ae.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "terraform-nixos": {
