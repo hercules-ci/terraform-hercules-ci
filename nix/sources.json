@@ -24,15 +24,15 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "terraform-nixos": {
-        "branch": "master",
+        "branch": "install-static-user-nix-2",
         "description": "A set of Terraform modules that are designed to deploy NixOS",
         "homepage": null,
-        "owner": "tweag",
+        "owner": "hercules-ci",
         "repo": "terraform-nixos",
-        "rev": "4979e668444529438d42f5230a59d2388dd65f86",
-        "sha256": "0fx2ycax7rj5phing93915x9w8h83c45nhawfd0qirdz85qmp8jr",
+        "rev": "65fc5758a6660386a02ab32d9e7245cd9a521445",
+        "sha256": "0fm3syrh1sh9kdgcsh2ryf8if6g25q18mbikgnnlchy5h09vg4nv",
         "type": "tarball",
-        "url": "https://github.com/tweag/terraform-nixos/archive/4979e668444529438d42f5230a59d2388dd65f86.tar.gz",
+        "url": "https://github.com/hercules-ci/terraform-nixos/archive/65fc5758a6660386a02ab32d9e7245cd9a521445.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
