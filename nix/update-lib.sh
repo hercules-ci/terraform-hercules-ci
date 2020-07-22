@@ -18,10 +18,14 @@ let
   updateSrc = src:
     if src ? owner && src ? repo && src ? rev
     then ''
-        sed -e 's`\(git::https://github.com/${src.owner}/${src.repo}.git.*ref=\)........................................`\1'"${src.rev}\`" -i ${filesSh}
+        sed -e 's`\(git::https://github.com/\)[^/]*\(/${src.repo}.git.*ref=\)........................................`\1${src.owner}\2${src.rev}`' -i ${filesSh}
       ''
     else "";
-in script
+in
+  ''
+    set -euo pipefail
+    ${script}
+  ''
 EOE
   )" --arg sourceNames "$1" --argstr filesSh "$2" --json | jq -r .)"
 }

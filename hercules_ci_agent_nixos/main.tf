@@ -5,11 +5,10 @@ locals {
     var.use_prebuilt ? [abspath("${path.module}/hercules-ci-cache.nix")] : [],
     var.configs
     )
-  nixpkgs_src = jsondecode(file("${path.module}/sources.json"))["nixpkgs"]["url"]
 }
 
 module "deploy_nixos" {
-  source = "git::https://github.com/tweag/terraform-nixos.git//deploy_nixos?ref=aa387e9132da5723c757024a9b95e86a9fbee688"
+  source = "git::https://github.com/tweag/terraform-nixos.git//deploy_nixos?ref=4979e668444529438d42f5230a59d2388dd65f86"
 
   config = "{ pkgs, lib, ... }: { imports = [ (/. + ''${join("'') (/. + ''",compact(flatten(local.configs)))}'') ]; }"
 
@@ -17,7 +16,9 @@ module "deploy_nixos" {
   target_host = var.target_host
   target_system = var.target_system
   build_on_target = var.build_on_target
-  NIX_PATH = "nixpkgs=${local.nixpkgs_src}"
+  NIX_PATH = var.NIX_PATH
+  extra_eval_args = var.extra_eval_args
+  extra_build_args = var.extra_build_args
 
   triggers = var.triggers
 
