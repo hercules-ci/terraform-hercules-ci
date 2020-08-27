@@ -8,7 +8,7 @@ locals {
 }
 
 module "deploy_nixos" {
-  source = "git::https://github.com/tweag/terraform-nixos.git//deploy_nixos?ref=4979e668444529438d42f5230a59d2388dd65f86"
+  source = "git::https://github.com/tweag/terraform-nixos.git//deploy_nixos?ref=af6661938e2af66e3f8ae6809a293c1b6862ed29"
 
   config = "{ pkgs, lib, ... }: { imports = [ (/. + ''${join("'') (/. + ''",compact(flatten(local.configs)))}'') ]; }"
 
