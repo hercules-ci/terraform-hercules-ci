@@ -1,14 +1,14 @@
 {
     "hercules-ci-agent": {
-        "branch": "hercules-ci-agent-0.7.4",
+        "branch": "module-rework",
         "description": "https://hercules-ci.com build agent",
         "homepage": "",
         "owner": "hercules-ci",
         "repo": "hercules-ci-agent",
-        "rev": "7127bc84d96b8c8ffc85443b3709ecc16a1e9ca9",
-        "sha256": "0mb1k0n3la33y7z5q4w0wxrbg18mqaxf128vsf3r07271cjx9yv3",
+        "rev": "6c196a6eccb8a7658b78677cce453de24443f960",
+        "sha256": "159k9dl112jwj46kvd9627qq0dkf4p8bchryrk9lqdh4ghjkhlm2",
         "type": "tarball",
-        "url": "https://github.com/hercules-ci/hercules-ci-agent/archive/7127bc84d96b8c8ffc85443b3709ecc16a1e9ca9.tar.gz",
+        "url": "https://github.com/hercules-ci/hercules-ci-agent/archive/6c196a6eccb8a7658b78677cce453de24443f960.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {
@@ -17,10 +17,10 @@
         "homepage": "https://github.com/NixOS/nixpkgs",
         "owner": "NixOS",
         "repo": "nixpkgs-channels",
-        "rev": "14006b724f3d1f25ecf38238ee723d38b0c2f4ce",
-        "sha256": "07hfbilyh818pigfn342v2r05n8061wpjaf1m4h291lf6ydjagis",
+        "rev": "929768261a3ede470eafb58d5b819e1a848aa8bf",
+        "sha256": "0zi54vbfi6i6i5hdd4v0l144y1c8rg6hq6818jjbbcnm182ygyfa",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs-channels/archive/14006b724f3d1f25ecf38238ee723d38b0c2f4ce.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs-channels/archive/929768261a3ede470eafb58d5b819e1a848aa8bf.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "terraform-nixos": {
